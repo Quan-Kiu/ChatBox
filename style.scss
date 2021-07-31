@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+*::after,
+*::before,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+}
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+  font-weight: 600;
+  background: #22c1c3; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    140deg,
+    #fdbb2d,
+    #22c1c3
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    140deg,
+    #fdbb2d,
+    #22c1c3
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-family: "Poppins", sans-serif;
+}
+
+.circle {
+  opacity: 0.5;
+  &:nth-of-type(2) {
+    background: #c0c0aa; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #1cefff,
+      #c0c0aa
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #1cefff,
+      #c0c0aa
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  transition: 2s ease-in-out;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+
+  background: #7f00ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #e100ff,
+    #7f00ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #e100ff,
+    #7f00ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.wrapper {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+  height: 800px;
+  display: flex;
+  background: transparent;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.3),
+    10px 10px 5px rgba(0, 0, 0, 0.2), inset -1px -1px 2px rgba(255, 255, 255, 1),
+    inset 1px 1px 3px rgba(0, 0, 0, 0.4);
+
+  border: 30px solid transparent;
+  text-align: center;
+}
+
+.logo {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+
+  i {
+    color: #ecf0f3;
+    font-size: 100px;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5))
+      drop-shadow(-1px -1px 1px rgba(255, 255, 255, 0.4));
+  }
+  h1 {
+    margin-top: 15px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 1);
+    color: white;
+    text-align: center;
+    width: 85px;
+    height: 85px;
+    padding: 16px 0;
+    display: block;
+    position: relative;
+    box-shadow: -1px -1px 1px rgba(255, 255, 255, 0.5),
+      2px 2px 3px rgba(0, 0, 0, 0.4);
+    border: 3px solid orangered;
+  }
+}
+
+.title {
+  text-decoration: underline;
+  font-size: 80px;
+  color: orangered;
+  filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.6))
+    drop-shadow(-2px -2px 2px rgba(255, 255, 255, 0.8));
+}
+
+.btn {
+  cursor: pointer;
+  color: white;
+  background-color: orangered;
+  padding: 20px 100px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5),
+    -1px -1px 2px rgba(255, 255, 255, 0.4), inset 1px 1px 1px rgba(0, 0, 0, 0.2),
+    inset -1px -1px 1px rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  font-weight: 600;
+
+  &:active {
+    filter: grayscale(0.1);
+    box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.8),
+      inset -1px -1px 4px rgba(255, 255, 255, 0.8);
+  }
+}
+
+.content {
+  animation: opacity 1s forwards;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.5),
+    inset -1px -1px 5px rgba(1, 0, 0, 0.5);
+  flex-direction: column;
+  background: #ecf0f385;
+  backdrop-filter: blur(10px);
+
+  .login {
+    margin: 200 0px;
+    display: none;
+    #sign {
+      display: none;
+    }
+    div {
+      &:nth-of-type(2) {
+        margin: 20px 0;
+      }
+      position: relative;
+      i {
+        opacity: 0.5;
+        padding-left: 20px;
+        position: absolute;
+        font-size: 20px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      input {
+        border-radius: 20px;
+
+        box-shadow: inset -3px -3px 3px rgba(255, 255, 255, 0.5),
+          inset 3px 3px 5px rgba(0, 0, 0, 0.5);
+        outline: none;
+        background: transparent;
+        display: block;
+        border: none;
+        padding: 0 50px;
+        font-weight: 600;
+        font-size: 20px;
+        width: 300px;
+        height: 50px;
+        color: rgba(0, 0, 0, 0.6);
+        &:focus {
+          box-shadow: inset -3px -3px 3px rgba(255, 255, 255, 0.5),
+            inset 3px 3px 5px rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+  }
+
+  .sub-login {
+    display: none;
+    span {
+      position: relative;
+
+      &:nth-of-type(2) {
+        margin: 0 10px;
+      }
+    }
+    .auth {
+      opacity: 0.6;
+      cursor: pointer;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 2px;
+        background: rgba(0, 0, 0, 1);
+        bottom: 0;
+        transition: all 0.5s;
+      }
+
+      &:hover {
+        opacity: 1;
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

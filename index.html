@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>31/7</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="wrapper" id="wrapper">
+      <div class="container">
+        <div class="content" id="container">
+          <div class="logo">
+            <i class="fab fa-apple"></i>
+            <h1>QK</h1>
+          </div>
+          <h2 class="title">Chat Box</h2>
+
+          <form class="login" id="login">
+            <div>
+              <i class="far fa-user"></i>
+              <input type="text" placeholder="UserName" />
+            </div>
+            <div>
+              <i class="fas fa-key"></i>
+              <input type="password" placeholder="PassWord" />
+            </div>
+            <div id="sign">
+              <i class="fas fa-at"></i>
+              <input type="email" placeholder="Email" />
+            </div>
+          </form>
+          <button onclick="action('login')" class="btn" id="btn">
+            Get Started
+          </button>
+          <div class="sub-login" id="sub-login">
+            <span class="auth" onclick="action('forgot')"
+              >Forgotten Password</span
+            ><span><b>or</b></span
+            ><span class="auth" onclick="action('sign')"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var wrapper = document.getElementById("wrapper");
+    let container = document.getElementById("container");
+    var elm = document.createElement("div");
+    elm.classList.add("circle");
+    document.body.appendChild(elm);
+    var elm = document.createElement("div");
+    elm.classList.add("circle");
+    document.body.appendChild(elm);
+
+    let circle = document.querySelectorAll("body .circle");
+
+    const autocircle = () => {
+      rd = Math.floor(Math.random() * 2);
+      x = Math.floor(Math.random() * window.outerWidth);
+      y = Math.floor(Math.random() * window.outerHeight);
+
+      circle[rd].style.left = "" + x + "px";
+      circle[rd].style.top = "" + y + "px";
+    };
+
+    setInterval(autocircle, 1000);
+
+    function action(string) {
+      let sign = document.getElementById("sign");
+      let button = document.getElementById("btn");
+      let sub_Login = document.getElementById("sub-login");
+      let login = document.getElementById("login");
+      let auth = document.getElementsByClassName("auth");
+      if (string == "login") {
+        sub_Login.style.display = "block";
+        sign.style.display = "none";
+        login.style.display = "block";
+        button.innerHTML = "Login";
+        auth[1].innerHTML = "Sign Up";
+        auth[1].setAttribute("onclick", "action('sign')");
+      } else if (string == "sign") {
+        auth[1].innerHTML = "Login";
+        auth[1].setAttribute("onclick", "action('login')");
+        button.innerHTML = "Sign Up";
+        sign.style.display = "block";
+      }
+    }
+  </script>
+</html>
