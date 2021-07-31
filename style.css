@@ -18,22 +18,40 @@ a {
 
 body {
   position: relative;
+  z-index: -1;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  position: relative;
   width: 100vw;
+  z-index: -1;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100vh;
   overflow: hidden;
-  font-weight: 600;
   background: #22c1c3;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(140deg, #fdbb2d, #22c1c3);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  font-family: "Poppins", sans-serif;
 }
 
 .circle {
-  opacity: 0.5;
-  -webkit-transition: 2s ease-in-out;
-  transition: 2s ease-in-out;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-transition: 2s all ease-in-out;
+  transition: 2s all ease-in-out;
   position: absolute;
   width: 400px;
   height: 400px;
@@ -56,26 +74,10 @@ body {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.wrapper {
-  position: relative;
-  max-width: 1440px;
-  margin: 0 auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  min-height: 100vh;
-}
-
 .container {
   position: relative;
-  width: 50%;
-  height: 800px;
+  width: 60%;
+  height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -284,6 +286,96 @@ body {
   }
   to {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .logo {
+    gap: 5px;
+  }
+  .logo i {
+    font-size: 50px;
+  }
+  .logo h1 {
+    margin-top: 10px;
+    border-radius: 50%;
+    background: black;
+    color: white;
+    text-align: center;
+    width: 50px;
+    font-size: 20px;
+    height: 50px;
+    padding: 7px 0;
+    display: block;
+    position: relative;
+    -webkit-box-shadow: -1px -1px 1px rgba(255, 255, 255, 0.5), 2px 2px 3px rgba(0, 0, 0, 0.4);
+            box-shadow: -1px -1px 1px rgba(255, 255, 255, 0.5), 2px 2px 3px rgba(0, 0, 0, 0.4);
+    border: 3px solid orangered;
+  }
+  .title {
+    font-size: 50px;
+  }
+  .btn {
+    padding: 10px 50px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    width: 80%;
+  }
+  .logo {
+    gap: 5px;
+  }
+  .logo i {
+    font-size: 50px;
+  }
+  .logo h1 {
+    margin-top: 10px;
+    border-radius: 50%;
+    background: black;
+    color: white;
+    text-align: center;
+    width: 50px;
+    font-size: 20px;
+    height: 50px;
+    padding: 7px 0;
+    display: block;
+    position: relative;
+    -webkit-box-shadow: -1px -1px 1px rgba(255, 255, 255, 0.5), 2px 2px 3px rgba(0, 0, 0, 0.4);
+            box-shadow: -1px -1px 1px rgba(255, 255, 255, 0.5), 2px 2px 3px rgba(0, 0, 0, 0.4);
+    border: 3px solid orangered;
+  }
+  .title {
+    font-size: 40px;
+  }
+  .btn {
+    padding: 10px 50px;
+  }
+  .content .login div {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 80%;
+    height: 40px;
+    display: block;
+  }
+  .content .login div i {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+  .content .login div input {
+    font-size: 15px;
+    width: 100%;
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    width: 95%;
+    height: 90%;
   }
 }
 /*# sourceMappingURL=style.css.map */

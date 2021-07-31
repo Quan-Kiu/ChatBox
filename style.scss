@@ -14,11 +14,23 @@ a {
 }
 body {
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  z-index: -1;
 
-  overflow: hidden;
   font-weight: 600;
+
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  position: relative;
+  width: 100vw;
+  z-index: -1;
+  margin: 0 auto;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
   background: #22c1c3; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     140deg,
@@ -30,12 +42,11 @@ body {
     #fdbb2d,
     #22c1c3
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  font-family: "Poppins", sans-serif;
 }
 
 .circle {
-  opacity: 0.5;
+  top: 0;
+  left: 0;
   &:nth-of-type(2) {
     background: #c0c0aa; /* fallback for old browsers */
     background: -webkit-linear-gradient(
@@ -49,8 +60,8 @@ body {
       #c0c0aa
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
-
-  transition: 2s ease-in-out;
+  z-index: 1;
+  transition: 2s all ease-in-out;
   position: absolute;
   width: 400px;
   height: 400px;
@@ -71,20 +82,10 @@ body {
   border-radius: 50%;
 }
 
-.wrapper {
-  position: relative;
-  max-width: 1440px;
-  margin: 0 auto;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  min-height: 100vh;
-}
-
 .container {
   position: relative;
-  width: 50%;
-  height: 800px;
+  width: 60%;
+  height: 80%;
   display: flex;
   background: transparent;
   align-items: center;
@@ -143,12 +144,12 @@ body {
   border: none;
   outline: none;
   border-radius: 20px;
+
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5),
     -1px -1px 2px rgba(255, 255, 255, 0.4), inset 1px 1px 1px rgba(0, 0, 0, 0.2),
     inset -1px -1px 1px rgba(255, 255, 255, 0.5);
   font-size: 20px;
   font-weight: 600;
-
   &:active {
     filter: grayscale(0.1);
     box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.8),
@@ -251,5 +252,106 @@ body {
   }
   to {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .logo {
+    gap: 5px;
+
+    i {
+      font-size: 50px;
+    }
+    h1 {
+      margin-top: 10px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 1);
+      color: white;
+      text-align: center;
+      width: 50px;
+      font-size: 20px;
+      height: 50px;
+      padding: 7px 0;
+      display: block;
+      position: relative;
+      box-shadow: -1px -1px 1px rgba(255, 255, 255, 0.5),
+        2px 2px 3px rgba(0, 0, 0, 0.4);
+      border: 3px solid orangered;
+    }
+  }
+
+  .title {
+    font-size: 50px;
+  }
+
+  .btn {
+    padding: 10px 50px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    width: 80%;
+  }
+  .logo {
+    gap: 5px;
+
+    i {
+      font-size: 50px;
+    }
+    h1 {
+      margin-top: 10px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 1);
+      color: white;
+      text-align: center;
+      width: 50px;
+      font-size: 20px;
+      height: 50px;
+      padding: 7px 0;
+      display: block;
+      position: relative;
+      box-shadow: -1px -1px 1px rgba(255, 255, 255, 0.5),
+        2px 2px 3px rgba(0, 0, 0, 0.4);
+      border: 3px solid orangered;
+    }
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .btn {
+    padding: 10px 50px;
+  }
+
+  .content {
+    .login {
+      div {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        height: 40px;
+        display: block;
+
+        i {
+          font-size: 15px;
+          padding: 0 10px;
+        }
+        input {
+          font-size: 15px;
+          width: 100%;
+          padding: 0 30px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    width: 95%;
+    height: 90%;
   }
 }

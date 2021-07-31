@@ -16,6 +16,8 @@
   </head>
   <body>
     <div class="wrapper" id="wrapper">
+      <div class="circle"></div>
+      <div class="circle"></div>
       <div class="container">
         <div class="content" id="container">
           <div class="logo">
@@ -52,16 +54,7 @@
     </div>
   </body>
   <script>
-    var wrapper = document.getElementById("wrapper");
-    let container = document.getElementById("container");
-    var elm = document.createElement("div");
-    elm.classList.add("circle");
-    document.body.appendChild(elm);
-    var elm = document.createElement("div");
-    elm.classList.add("circle");
-    document.body.appendChild(elm);
-
-    let circle = document.querySelectorAll("body .circle");
+    let circle = document.getElementsByClassName("circle");
 
     const autocircle = () => {
       rd = Math.floor(Math.random() * 2);
