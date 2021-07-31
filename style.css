@@ -76,7 +76,7 @@ body {
 
 .container {
   position: relative;
-  width: 60%;
+  width: 50%;
   height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -188,14 +188,10 @@ body {
 
 .content .login {
   margin: 200 0px;
-  display: none;
-}
-
-.content .login #sign {
-  display: none;
 }
 
 .content .login div {
+  display: none;
   position: relative;
 }
 
@@ -289,34 +285,25 @@ body {
   }
 }
 
-@media screen and (max-width: 1100px) {
-  .logo {
-    gap: 5px;
+@media screen and (max-width: 1440px) {
+  .container {
+    width: 60%;
   }
   .logo i {
     font-size: 50px;
   }
   .logo h1 {
     margin-top: 10px;
-    border-radius: 50%;
-    background: black;
-    color: white;
-    text-align: center;
     width: 50px;
     font-size: 20px;
     height: 50px;
     padding: 7px 0;
-    display: block;
-    position: relative;
-    -webkit-box-shadow: -1px -1px 1px rgba(255, 255, 255, 0.5), 2px 2px 3px rgba(0, 0, 0, 0.4);
-            box-shadow: -1px -1px 1px rgba(255, 255, 255, 0.5), 2px 2px 3px rgba(0, 0, 0, 0.4);
-    border: 3px solid orangered;
   }
   .title {
-    font-size: 50px;
+    font-size: 60px;
   }
   .btn {
-    padding: 10px 50px;
+    padding: 20px 80px;
   }
 }
 
@@ -359,7 +346,6 @@ body {
             transform: translateX(-50%);
     width: 80%;
     height: 40px;
-    display: block;
   }
   .content .login div i {
     font-size: 15px;
@@ -381,6 +367,9 @@ body {
   .container {
     width: 95%;
     height: 90%;
+  }
+  .btn {
+    padding: 10px 30px;
   }
 }
 /*# sourceMappingURL=style.css.map */
